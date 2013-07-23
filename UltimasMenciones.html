@@ -35,5 +35,20 @@
 
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/sha1.js"></script>
+    <script type="text/javascript" src="assets/js/codebird.js"></script>
+    <script type="text/javascript">
+      var cb = new Codebird;
+      cb.setConsumerKey("8yzY7Zgs01XjibpG7XceBQ", "IDjsaIM6Q34M2OIwIHm8Bc9KEQHBRxDqoAEB81IgQuk");
+      cb.setToken("88465140-dPpEMQXl9n5wBFZTLVhLRR21XL4YHT7frDlrSQ46I", "XaeolpyyfydVTTlhQygZofJyCsA8rnWc3MwZmNDxNM");
+
+      cb.__call(
+          "statuses_mentionsTimeline",
+          {},
+          function (reply) {
+              console.log(reply);
+          }
+      );
+    </script>
   </body>
 </html>
