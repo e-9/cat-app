@@ -2,53 +2,79 @@
 <html>
   <head>
     <title>CAT - Ultimas Menciones</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset=utf-8>
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1>!</h1>
+    
+    <script type="text/x-handlebars">
+      
+      <h1>CAT</h1>
+    
+      <div class="container-fluid">
+        <div class="row-fluid">
+          
+          <!-- Menu izquierdo -->
+          <div class="span2">
+            <ul class="nav nav-list">
+              <li class="nav-header">Centro de Atencion Twitter</li>
+              <li class="active"><a href="UltimasMenciones.html">Ultimas menciones</a></li>
+              <li><a href="cat.html">Centro de atencion</a></li>
+              <li><a href="historial.html">Historial</a></li>
+              <li><a href="guia.html">Guia</a></li>
+            </ul>
+          </div>
+          <!-- -->
+          
+          <!-- Contenido -->
+          
+            <div class="span10">
+              <form>
+                <fieldset>
+                  <legend>Ultimas menciones</legend>
+                  
+                  <table class="table table-striped">
+                    
+                    <thead>
+                      <tr>
+                        <th class="span2">Nombre</th>
+                        <th class="span8">Twitt</th>
+                        <th class="span2">Estatus</th>
+                      </tr>
+                    </thead>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span2">
-          <ul class="nav nav-list">
-            <li class="nav-header">Centro de Atencion Twitter</li>
-            <li class="active"><a href="UltimasMenciones.html">Ultimas menciones</a></li>
-            <li><a href="cat.html">Centro de atencion</a></li>
-            <li><a href="historial.html">Historial</a></li>
-            <li><a href="guia.html">Guia</a></li>
-          </ul>
-        </div>
-        <div class="span10">
-          <form>
-            <fieldset>
-              <legend>Ultimas menciones</legend>
+                    <tbody>
+                      {{#each model}}
+                        <tr>
+                          <td>{{ name }}</td>
+                          <td>{{ twitt }}</td>
+                          <td>{{ status }}</td>
+                        </tr>
+                      {{/each}}
+                    </tbody>
 
-            </fieldset>
-          </form>
+                  </table>
+
+                </fieldset>
+              </form>
+            </div>
+          
+          <!-- -->
+
         </div>
       </div>
-    </div>
 
-
+    </script>
+    
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/handlebars-1.0.0-rc.4.js"></script>  
+    <script src="assets/js/ember-1.0.0-rc.6.js"></script>
     <script type="text/javascript" src="assets/js/sha1.js"></script>
     <script type="text/javascript" src="assets/js/codebird.js"></script>
-    <script type="text/javascript">
-      var cb = new Codebird;
-      cb.setConsumerKey("8yzY7Zgs01XjibpG7XceBQ", "IDjsaIM6Q34M2OIwIHm8Bc9KEQHBRxDqoAEB81IgQuk");
-      cb.setToken("88465140-dPpEMQXl9n5wBFZTLVhLRR21XL4YHT7frDlrSQ46I", "XaeolpyyfydVTTlhQygZofJyCsA8rnWc3MwZmNDxNM");
-
-      cb.__call(
-          "statuses_mentionsTimeline",
-          {},
-          function (reply) {
-              console.log(reply);
-          }
-      );
-    </script>
+    <script type="text/javascript" src="assets/js/menciones.js"></script>
+    
   </body>
 </html>
