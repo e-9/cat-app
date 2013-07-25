@@ -38,8 +38,9 @@
                   
                   <thead>
                     <tr>
+                      <th class="span1">#</th>
                       <th class="span2">Nombre</th>
-                      <th class="span8">Twitt</th>
+                      <th class="span7">Tweet</th>
                       <th class="span2">Estatus</th>
                     </tr>
                   </thead>
@@ -47,9 +48,10 @@
                   <tbody>
                     {{#each model}}
                       <tr>
+                        <td> {{ id }} </td>
                         <td> @{{ user.screen_name }} </td>
-                        <td>{{ text }}</td>
-                        <td>Pendiente</td>
+                        <td> {{ text }} </td>
+                        <td> <button class="btn" type="button" value="ABC">Large button</button> </td>
                       </tr>
                     {{/each}}
                   </tbody>

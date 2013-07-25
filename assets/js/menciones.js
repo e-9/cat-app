@@ -16,3 +16,8 @@ cb.__call(
         });
     }
 );
+
+
+$(document).ready(function() {
+  
+});
