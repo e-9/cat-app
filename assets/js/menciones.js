@@ -17,7 +17,6 @@ cb.__call(
     }
 );
 
-
-$(document).ready(function() {
+function assignCase (value) {
   
-});
+}
