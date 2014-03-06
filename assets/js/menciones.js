@@ -1,7 +1,6 @@
-
 var cb = new Codebird;
-cb.setConsumerKey("8yzY7Zgs01XjibpG7XceBQ", "IDjsaIM6Q34M2OIwIHm8Bc9KEQHBRxDqoAEB81IgQuk");
-cb.setToken("88465140-dPpEMQXl9n5wBFZTLVhLRR21XL4YHT7frDlrSQ46I", "XaeolpyyfydVTTlhQygZofJyCsA8rnWc3MwZmNDxNM");
+cb.setConsumerKey("¨{vlaue}", "{vlaue}");
+cb.setToken("{vlaue}", "{vlaue}");
 cb.__call(
     "statuses_mentionsTimeline",
     {},
